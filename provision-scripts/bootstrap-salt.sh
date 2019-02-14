@@ -11,6 +11,8 @@ apt-get update
 apt-get install salt-master salt-ssh  -y
 cp /vagrant/provision-scripts/deploy-file/master /etc/salt/master
 cp /vagrant/provision-scripts/deploy-file/roster /etc/salt/roster
+cp /vagrant/provision-scripts/deploy-file/id_rsa.salt /root/.ssh/id_rsa.salt
+chmod 0700 /root/.ssh/id_rsa.salt
 service salt-master restart
 
 echo "192.168.5.10 salt" | tee -a /etc/hosts
