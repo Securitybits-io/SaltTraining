@@ -9,8 +9,8 @@ echo deb http://ppa.launchpad.net/saltstack/salt/ubuntu `lsb_release -sc` main |
 wget -q -O- "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x4759FA960E27C0A6" | sudo apt-key add -
 apt-get update
 apt-get install salt-master salt-ssh  -y
-cp /vagrant/master /etc/salt/master
-cp /vagrant/roster /etc/salt/roster
+cp /vagrant/provision-scripts/deploy-file/master /etc/salt/master
+cp /vagrant/provision-scripts/deploy-file/roster /etc/salt/roster
 service salt-master restart
 
 echo "192.168.5.10 salt" | tee -a /etc/hosts
