@@ -6,7 +6,7 @@ cp /vagrant/provision-scripts/deploy-file/bashrc /home/vagrant/.bashrc
 cp /vagrant/provision-scripts/deploy-file/bashrc /root/.bashrc
 
 #add salt private ssh key
-cat /vagrant/provision-scripts/deploy-file/id_rsa.salt.pub > /home/vagrant/.ssh/authorized_keys
+cat /vagrant/provision-scripts/deploy-file/id_rsa.salt.pub >> /home/vagrant/.ssh/authorized_keys
 chmod 0644 /home/vagrant/.ssh/authorized_keys
 chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
 

@@ -3,6 +3,7 @@ Vagrant.configure("2") do |config|
     salt.vm.box = "ubuntu/bionic64"
     salt.vm.hostname = "salt"
     salt.vm.network "private_network", ip: "192.168.5.10"
+    salt.vm.synced_folder "saltstack/", "/srv"
     salt.vm.provision :shell, path: "provision-scripts/bootstrap-salt.sh"
   end
   config.vm.define "devminion" do |devminion|
